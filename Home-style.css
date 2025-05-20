@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    position: static;
+}
+
+
+
+
+/* Background div with full screen height */
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('pictures/homepage-background.jpg'); /* or your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Navigation bar on top of image */
+.nav-bar {
+    width: 100%;
+    padding: 2ch;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.page-title{
+    justify-content: center;
+    display: inline-block;
+    margin-left: -0.4ch;
+    margin-top: 2ch;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.04em;
+    padding: 0 2ch;
+    animation: slideUp 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    animation-delay: 0.3s;
+    transform: translateY(10ch);
+    opacity: 0;
+    animation-fill-mode: forwards;
+    
+    
+}
+@keyframes slideUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+.nav-bar-buttons{
+    display: flex;
+    gap: 3ch;
+    height: 6ch;
+}
+
+
+.about-us, .login1, .contact-us{
+    background-color: transparent;
+    color: white;
+    height: 4.3ch;
+    width: 15ch;
+    border-radius: 3ch;
+    backdrop-filter: blur(3px);
+    border: 0.15ch solid white;
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 50;
+    transition: 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+
+.login1:hover, .about-us:hover, .contact-us:hover{
+    backdrop-filter: blur(6px);
+    display: fixed;
+    height: 5ch;
+    gap: 10ch;
+}
+
+/* Profile & dropdown */
+.profile {
+    width: 6ch;
+    height: 6ch;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile:hover{
+    transition: 0.3s ease;
+    border: 4px solid white;
+
+}
+
+
+.login_window {
+    display: none;
+    width: 20ch;
+    height: fit-content;
+    flex-direction: column;
+    max-height: 20ch;
+    position: absolute;
+    margin-top: 6.1ch;
+    margin-right: 18ch;
+    background-color: white;
+    border-radius: 1ch;
+    transition: 0.3s ease;
+}
+
+.welcome-login-window{
+    display: flex;
+    top: -1ch;
+    justify-content: center;
+    align-items: center;
+}
+
+.username-login-window{
+   display: flex;
+   margin-left: 0ch;
+   width: 100%;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
+
+.profile-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-wrap:hover .login_window {
+    display: flex;
+}
+
+/* Content below */
+.about-us-page {
+    background-color: white;
+    padding: 5ch;
+}
+
+.login, .signup{
+    height: 4ch;
+    width: 100%;
+    border-radius: 1ch;
+    box-sizing: border-box;
+    border: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.login:link, .login:visited, .signup:link, .signup:visited {
+    color: inherit !important; /* Make sure both normal and visited links stay black */
+    text-decoration: none !important; /* No underline */
+}
+
+.login:hover, .login:active, .signup:hover, .signup:active {
+    color: inherit !important; /* Keep the color the same on hover and active */
+    text-decoration: none !important; /* No underline on hover or active */
+    background-color: rgb(207, 207, 207);
+}
+
+
+
+html{
+        scroll-behavior: smooth;
+}
