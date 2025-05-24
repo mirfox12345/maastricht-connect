@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Successfully logged in
             $_SESSION['username'] = $user['username'];
             $_SESSION['islogin'] = true;
-            header("Location: Home.php");  // Redirect to home page
+            header("Location: home.php");  // Redirect to home page
             exit();
         } else {
             echo "Invalid login.";

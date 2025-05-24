@@ -30,7 +30,7 @@ $posts = $result->fetch_all(MYSQLI_ASSOC);
 <body>
     <div class="nav-bar">
         <ul class="nav-bar-ul">
-            <a class="home" href="Home.php">Home</a>
+            <a class="home" href="home.php">Home</a>
             <a class="post" href="post.php">Post</a>
         </ul>
         <div class="profile-wrap">
